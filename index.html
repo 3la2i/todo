@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Task Organizer</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="create-section">
+            <h2>Create List</h2>
+            <form id="create-list-form">
+                <input type="text" id="list-name-input" placeholder="List Name" required>
+                <button type="submit">Create</button>
+            </form>
+        </section>
+        <section class="tasks-section">
+            <h2>Manage Tasks</h2>
+            <div class="task-controls">
+                <input type="text" id="task-name-input" placeholder="Task Name" required>
+                <select id="task-priority-select">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="task-date-input">
+                <button id="add-task-button">Add Task</button>
+            </div>
+            <div class="task-filters">
+                <select id="priority-filter">
+                    <option value="">All</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="date-filter">
+            </div>
+            <div id="tasks-container" class="tasks-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Task Organizer. All rights reserved.</p>
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
